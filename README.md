@@ -5,7 +5,7 @@ Este script, `antiWuolah.sh`, procesa archivos PDF eliminando páginas innecesar
 
 ### Funcionalidades:
 - **Exclusión de páginas**: Elimina la primera, la última, y las páginas 4 y 5.
-- **Recorte de páginas**: Aplica diferentes márgenes dependiendo de si la página es múltiplo de 3 o no.
+- **Recorte de páginas**: Aplica diferentes márgenes dependiendo del posicionamiento típico de publicidad de Wuolah.
 - **Escalado**: Escala las páginas recortadas al tamaño A4 con factores de escalado personalizados.
 - **Combinación**: Combina todas las páginas procesadas en un único PDF de salida.
 
