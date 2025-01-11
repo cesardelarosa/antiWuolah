@@ -105,7 +105,7 @@ exclude_pages=(1 $num_pages 4 5)
 ```
 
 ### Mayor control de "tipos de página"
-Wuolah actualmente tiene 2 plantillas para meter publicidad y se van alternando en el pdf generado, este script se adapta a esa configuración, pero si esta plantilla cambia el script deja de ser útil. Aún así puedes modificar la lógica del script incluyendo más tipos de páginas con otras variables `margin` y `scale` y un cambio en la lógica del bucle while.
+Wuolah actualmente tiene 2 plantillas para meter publicidad y se van alternando en el pdf generado, este script se adapta a esa configuración, pero si esta plantilla cambia, el script deja de ser útil. Aún así puedes modificar la lógica del script incluyendo más tipos de páginas con otras variables `margin` y `scale` y un cambio en la lógica del bucle while.
 
 ---
 
