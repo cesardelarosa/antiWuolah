@@ -82,9 +82,9 @@ El script utiliza las siguientes herramientas. Asegúrate de que estén instalad
 ## Uso
 
 1. **Clonar o copiar el script**: Guarda el archivo `antiWuolah.sh` en tu directorio de trabajo.
-  ```bash
-  git clone https://github.com/cesardelarosa/antiWuolah.git
-  ```
+   ```bash
+   git clone https://github.com/cesardelarosa/antiWuolah.git
+   ```
 
 2. **Dar permisos de ejecución al script** (en sistemas tipo UNIX como Linux o macOS):
    ```bash
@@ -95,8 +95,6 @@ El script utiliza las siguientes herramientas. Asegúrate de que estén instalad
    ```bash
    ./antiWuolah.sh <nombre_del_pdf>
    ```
-En Windows, ejecuta el script usando una terminal compatible como Git Bash o WSL (Windows Subsystem for Linux).
-
 ---
 
 ## Personalización
