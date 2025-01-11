@@ -75,6 +75,8 @@ El script utiliza las siguientes herramientas. Asegúrate de que estén instalad
 
 2. Asegúrate de que las herramientas `pdfcrop` y `pdfjam` estén disponibles desde la línea de comandos.
 
+(O símplemente usa WSL, espabila un poco)
+
 ---
 
 ## Uso
