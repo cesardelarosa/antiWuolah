@@ -11,11 +11,12 @@ input_pdf="$1"
 output_pdf="${input_pdf%.pdf}-SinAnuncios.pdf"
 temp_pdf="temp.pdf"
 temp_dir=$(mktemp -d)
+
 # Margins: (L, T, R, B)
 margins_multiples_of_3="-75 -110 0 -10"
 margins_others="-10 0 -25 -38.5"
-scale_multiples_of_3=1.2  # Escalado para múltiplos de 3
-scale_others=1.15          # Escalado para el resto
+scale_multiples_of_3=1.2
+scale_others=1.15
 
 # Comprobar si el archivo de entrada existe
 if [ ! -f "$input_pdf" ]; then
@@ -44,9 +45,6 @@ for ((i=1; i<=num_pages; i++)); do
         fi
     fi
 done
-
-# Depuración: Mostrar páginas a incluir
-echo "Páginas a incluir: $pages_to_keep"
 
 # Comprobar si hay páginas restantes
 if [ -z "$pages_to_keep" ]; then
