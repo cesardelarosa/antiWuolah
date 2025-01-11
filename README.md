@@ -91,6 +91,10 @@ El script utiliza las siguientes herramientas. Asegúrate de que estén instalad
    chmod +x antiWuolah.sh
    ```
 
+3. **Ejecutar el script**
+   ```bash
+   ./antiWuolah.sh <nombre_del_pdf>
+   ```
 En Windows, ejecuta el script usando una terminal compatible como Git Bash o WSL (Windows Subsystem for Linux).
 
 ---
