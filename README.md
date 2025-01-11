@@ -1,7 +1,7 @@
 # AntiWuolah: Script para procesar PDFs
 
 ## Descripción
-Este script, `antiWuolah.sh`, procesa archivos PDF eliminando páginas innecesarias, recortando y escalando las páginas restantes para ajustarlas al tamaño A4, eliminando la publicidad.
+Este script está diseñado para procesar PDFs provenientes de Wuolah, eliminando la publicidad y ajustando el contenido para una mejor usabilidad y legibilidad.
 
 ### Funcionalidades:
 - **Exclusión de páginas**: Elimina la primera, la última, y las páginas 4 y 5.
@@ -26,7 +26,7 @@ Más abajo se indica como instalarlas.
 
 1. **Clonar o copiar el script**: Guarda el archivo `antiWuolah.sh` en tu directorio de trabajo.
    ```bash
-   git clone https://github.com/cesardelarosa/antiWuolah.git
+   git clone https://github.com/cesardelarosa/antiWuolah.git && cd antiWuolah
    ```
 
 2. **Dar permisos de ejecución al script** (en sistemas tipo UNIX como Linux o macOS):
@@ -79,7 +79,6 @@ Para instalar las dependencias en diferentes distribuciones de Linux:
 
 3. Alternativamente, y quizá algo más sencillo, usa [**WSL (Windows Subsystem for Linux)**](https://learn.microsoft.com/es-es/windows/wsl/install) y sigue los pasos para Linux.
 
-
 ---
 ## Personalización
 
@@ -98,6 +97,15 @@ scale_multiples_of_3=1.2  # Escalado para páginas múltiplos de 3
 scale_others=1.15         # Escalado para otras páginas
 ```
 - Valores mayores que 1 aumentan el tamaño; valores menores que 1 lo reducen.
+
+### Cambiar las páginas eliminadas
+Las páginas a eliminar se indican en:
+```bash
+exclude_pages=(1 $num_pages 4 5)
+```
+
+### Mayor control de "tipos de página"
+Wuolah actualmente tiene 2 plantillas para meter publicidad y se van alternando en el pdf generado, este script se adapta a esa configuración, pero si esta plantilla cambia el script deja de ser útil. Aún así puedes modificar la lógica del script incluyendo más tipos de páginas con otras variables `margin` y `scale` y un cambio en la lógica del bucle while.
 
 ---
 
