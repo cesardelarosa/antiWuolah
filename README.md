@@ -14,68 +14,11 @@ Este script, `antiWuolah.sh`, procesa archivos PDF eliminando páginas innecesar
 ## Requisitos
 El script utiliza las siguientes herramientas. Asegúrate de que estén instaladas en tu sistema:
 
-### Linux
 1. **qpdf**: Para manipular y combinar páginas de PDFs.
-   - Instalación en distribuciones basadas en Arch:
-     ```bash
-     sudo pacman -S qpdf
-     ```
-   - Instalación en distribuciones basadas en Debian/Ubuntu:
-     ```bash
-     sudo apt install qpdf
-     ```
-   - Instalación en Fedora:
-     ```bash
-     sudo dnf install qpdf
-     ```
-
 2. **pdfcrop**: Para recortar páginas (parte de TeX Live).
-   - Instalación en Arch Linux:
-     ```bash
-     sudo pacman -S texlive-bin
-     ```
-   - Instalación en Debian/Ubuntu:
-     ```bash
-     sudo apt install texlive-extra-utils
-     ```
-   - Instalación en Fedora:
-     ```bash
-     sudo dnf install texlive-utils
-     ```
-
 3. **pdfjam**: Para escalar páginas y ajustar el tamaño al formato A4.
-   - Instalación en Arch Linux:
-     ```bash
-     sudo pacman -S texlive-core
-     ```
-   - Instalación en Debian/Ubuntu:
-     ```bash
-     sudo apt install texlive-extra-utils
-     ```
-   - Instalación en Fedora:
-     ```bash
-     sudo dnf install texlive-pdfjam
-     ```
 
-### macOS
-1. Instalar **Homebrew** si no lo tienes:
-   ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
-2. Instalar las herramientas necesarias:
-   ```bash
-   brew install qpdf
-   brew install texlive
-   ```
-
-### Windows
-1. Instalar las herramientas necesarias:
-   - Descarga e instala **qpdf** desde [qpdf GitHub releases](https://github.com/qpdf/qpdf/releases).
-   - Instala una distribución de LaTeX como **MiKTeX** desde [MiKTeX](https://miktex.org/download).
-
-2. Asegúrate de que las herramientas `pdfcrop` y `pdfjam` estén disponibles desde la línea de comandos.
-
-(O símplemente usa WSL, espabila un poco)
+Más abajo se indica como instalarlas.
 
 ---
 
@@ -96,7 +39,48 @@ El script utiliza las siguientes herramientas. Asegúrate de que estén instalad
    ./antiWuolah.sh <nombre_del_pdf>
    ```
 ---
+## Instalación de dependencias
 
+### Linux
+Para instalar las dependencias en diferentes distribuciones de Linux:
+
+1. **Arch Linux**:
+   ```bash
+   sudo pacman -S qpdf texlive-bin texlive-core
+   ```
+
+2. **Debian/Ubuntu**:
+   ```bash
+   sudo apt install qpdf texlive-extra-utils
+   ```
+
+3. **Fedora**:
+   ```bash
+   sudo dnf install qpdf texlive-utils texlive-pdfjam
+   ```
+
+
+### macOS
+1. Instala **Homebrew** si no lo tienes:
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+2. Instala las herramientas necesarias:
+   ```bash
+   brew install qpdf texlive
+   ```
+
+### Windows
+1. Descarga e instala las dependencias manualmente:
+   - **qpdf**: [Descargar desde GitHub](https://github.com/qpdf/qpdf/releases).
+   - **MiKTeX**: [Descargar desde MiKTeX](https://miktex.org/download), que incluye `pdfcrop` y `pdfjam`.
+
+2. Asegúrate de que las herramientas estén disponibles desde la línea de comandos.
+
+3. Alternativamente, y quizá algo más sencillo, usa [**WSL (Windows Subsystem for Linux)**](https://learn.microsoft.com/es-es/windows/wsl/install) y sigue los pasos para Linux.
+
+
+---
 ## Personalización
 
 ### Cambiar los márgenes de recorte
