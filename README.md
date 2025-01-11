@@ -1,7 +1,7 @@
 # AntiWuolah: Script para procesar PDFs
 
 ## Descripción
-Este script, `antiWuolah.sh`, procesa archivos PDF eliminando páginas innecesarias, recortando y escalando las páginas restantes para ajustarlas al tamaño A4.
+Este script, `antiWuolah.sh`, procesa archivos PDF eliminando páginas innecesarias, recortando y escalando las páginas restantes para ajustarlas al tamaño A4, eliminando la publicidad.
 
 ### Funcionalidades:
 - **Exclusión de páginas**: Elimina la primera, la última, y las páginas 4 y 5.
